@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<bean id="model" class="org.egitim.gui.Model"></bean>
+	<bean id="view" class="org.egitim.gui.View">
+
+	</bean>
+	<!--Controller Class takes View and Model as constructor arguments, hence it's referred in here -->
+	<bean id="controller" class="org.egitim.gui.Controller">
+		<constructor-arg ref="view" />
+		<constructor-arg ref="model" />
+	</bean>
+
+
+</beans>
