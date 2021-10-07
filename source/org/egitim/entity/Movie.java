@@ -3,6 +3,8 @@ package org.egitim.entity;
 import java.time.LocalDate;
 import java.util.EnumSet;
 
+import org.springframework.stereotype.Component;
+@Component
 public abstract class Movie {
 	private String title;
 	private String description;

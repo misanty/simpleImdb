@@ -2,13 +2,17 @@ package org.egitim.entity;
 
 import java.util.EnumSet;
 import java.util.Map;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 /*
  * A casting member can be an actor and director, and also a writer, 
  * therefor PersonRoles typed EnumSet is set as a value pair of the Map object
  */
+@Component
 public class MovieDetail extends Movie {
 	
-	private Map<Cast,EnumSet<PersonRoles>> casting;
+@Autowired private Map<Cast,EnumSet<PersonRoles>> casting;
 	private double rank;
 	
 

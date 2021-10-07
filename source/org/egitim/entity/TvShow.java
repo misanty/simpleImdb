@@ -1,5 +1,8 @@
 package org.egitim.entity;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class TvShow extends MovieDetail {
 
 	private short season;

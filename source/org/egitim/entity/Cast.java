@@ -2,6 +2,10 @@ package org.egitim.entity;
 
 import java.time.LocalDate;
 
+
+import org.springframework.stereotype.Component;
+
+@Component
 public class Cast {
 
 	private String name;

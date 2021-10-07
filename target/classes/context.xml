@@ -11,8 +11,8 @@
 	</bean>
 	<!--Controller Class takes View and Model as constructor arguments, hence it's referred in here -->
 	<bean id="controller" class="org.egitim.gui.Controller">
-		<constructor-arg ref="view" />
-		<constructor-arg ref="model" />
+		<constructor-arg name="view" ref="view" />
+		<constructor-arg name ="model" ref="model" />
 	</bean>
 
 

@@ -1,4 +1,4 @@
-package org.egitim.gui;
+package org.egitim.gui.view;
 
 import java.awt.BorderLayout;
 import java.awt.Dimension;
@@ -12,6 +12,8 @@ import javax.swing.JPanel;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
+import org.egitim.gui.model.Model;
+
 public class View {
 	
 	private Model model;
@@ -21,8 +23,10 @@ public class View {
 	private JPanel contentPanel;
 	private JTextArea detailedText;
 	
+	/*
+	 * iş katmanı ve veri katmanı arasında */
 	
-	void createAndShowGui(Model model) {
+	public void createAndShowGui(Model model) {
 		this.model = model;
 		Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
 		int height = screenSize.height * 2 / 8;
@@ -52,7 +56,7 @@ public class View {
 		
 	}
 	
-	File getFile() {
+	public File getFile() {
 		JFileChooser fileChooser = new JFileChooser();
 		fileChooser.setFileSelectionMode(JFileChooser.FILES_ONLY);
 		
@@ -60,11 +64,11 @@ public class View {
 		return fileChooser.getSelectedFile();
 	}
 	
-	void update( ) {
+	public void update( ) {
 		textField.setText(model.getFile());
 	}
 	
-	JButton getSelectedFileButton( ) {
+	public JButton getSelectedFileButton( ) {
 		return selectedButton;
 	}
 

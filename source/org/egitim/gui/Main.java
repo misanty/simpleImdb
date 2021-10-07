@@ -2,6 +2,7 @@ package org.egitim.gui;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
+import org.egitim.gui.controller.Controller;
 import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -15,6 +16,7 @@ public class Main {
  * 
  * App opens a file dialog box, and select a file name and prints it on the textbox.
  */
+	
 	public static void main(String[] args) {
 		
 		AbstractApplicationContext context = new ClassPathXmlApplicationContext("context.xml");
